@@ -1,0 +1,108 @@
+
+/* Pengaturan dasar halaman */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding: 20px;
+}
+
+/* Bagian kepala halaman */
+header {
+    background-color: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+/* Bagian utama */
+main {
+    background-color: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+main h2 {
+    color: #1d4ed8;
+    margin-bottom: 10px;
+}
+
+main > p {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+/* Formulir */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #629fe9;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #306ae7;
+}
+
+/* Tombol */
+button {
+    background-color: #2563eb;
+    color: rgb(157, 229, 255);
+    border: none;
+    padding: 13px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Hasil pengajuan */
+#hasil {
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    main {
+        padding: 20px;
+    }
+}

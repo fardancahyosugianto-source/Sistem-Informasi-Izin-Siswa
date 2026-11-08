@@ -1,33 +1,53 @@
-# Membuat isi halamannay
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTP-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silzin - Sistem Informasi Perizinan Siswa</title>
-    <link rel="stylesheet" herf="style.css">
+    <title>SiIzin - Sistem Informasi Izin Siswa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Silzin</h1>
-        <p1>SistemInformasi Perizina Sistem</p1>
+        <h1>SiIzin</h1>
+        <p>Sistem Informasi Izin Siswa</p>
     </header>
 
     <main>
-        <h2>Selamat Datang Di Perizinan Siswa</h2>
-        <p>Silahkan Pilih Jenis Izin Yang Ingin Diajukan</p>
+        <h2>Formulir Pengajuan Izin</h2>
+        <p>Silakan isi data berikut dengan benar.</p>
 
-        <button onclick="Pilihizin('Keluar')">
-            Izin Keluar
-        </button>
+        <form id="formIzin" onsubmit="ajukanIzin(event)">
 
-        <button onclick="Pilihizin('Pulang')">
-            Izin Pulang         
-        </button>
-        <p id="hasil"></p>
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" required>
+
+            <label for="kelas">Kelas:</label>
+            <input type="text" id="kelas" required>
+
+            <label for="tanggal">Tanggal Izin:</label>
+            <input type="date" id="tanggal" required>
+
+            <label for="jam">Jam Pelajaran:</label>
+            <input type="text" id="jam" placeholder="Contoh: Jam ke-3 dan 4" required>
+
+            <label for="jenis">Jenis Izin:</label>
+            <select id="jenis" required>
+                <option value="">-- Pilih Jenis Izin --</option>
+                <option value="Izin Keluar">Izin Keluar</option>
+                <option value="Izin Pulang">Izin Pulang</option>
+            </select>
+
+            <label for="alasan">Alasan Izin:</label>
+            <textarea id="alasan" rows="4" required></textarea>
+
+            <button type="submit">Ajukan Izin</button>
+        </form>
+
+        <div id="hasil"></div>
     </main>
 
-    <script  src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
