@@ -15,4 +15,15 @@ function ajukanIzin(event) {
         month:"long",
         year: "numeric"
     });
-    
+    //Mengamankan teks yang di maksukkan menggunakan fungsi function
+    function aman (teks) {
+        return teks.replace(/[&<>"']/g, function (karakter) {
+            return {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            }[karakter];
+        });
+    }
